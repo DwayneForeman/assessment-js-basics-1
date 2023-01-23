@@ -51,6 +51,23 @@ const pinkPrice = .55
 
 // CODE HERE
 
+let totalAcres = 0
+
+// set 'totalAcres' to 0 as we will need to keep count by first arting at 0
+
+for (let i = 0; i < 7; i++){
+
+    //i = 0 -- starting at index 0
+    //i < 7 -- there are 7 numbers to loop through through each array
+    //i ++ -- we need to increment by 1 to keep the look going
+    
+    totalAcres += fujiAcres[i] + galaAcres[i] + pinkAcres[i]
+    
+    // the [i] indicates the look going through each of the 3 arrays and adding it to the totalAcres variable
+}
+
+console.log(totalAcres)
+// printing the total
 
 
 
@@ -70,7 +87,12 @@ const pinkPrice = .55
 // CODE HERE
 
 
+let averageDailyAcres = totalAcres / 7
 
+// divide by 7 as there is 7 days of the week hence 7 numbers in each array
+
+console.log(averageDailyAcres)
+// printing the average
 
 
 // PROBLEM 3
@@ -107,7 +129,17 @@ let days = 0
 
 // CODE HERE
 
+while (acresLeft > 0) {
 
+    days++
+    //Increment 'days' by 1
+    acresLeft -= averageDailyAcres
+    //Subtracting 'averageDailyAcres from 'acres left'
+    
+}
+
+console.log(days)
+//printing 'days'
 
 // PROBLEM 4
 
@@ -135,10 +167,26 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+let fujiTons = fujiAcres.slice(0,7)
+let galaTons = galaAcres.slice(0,7)
+let pinkTons = pinkAcres.slice(0,7)
 
+
+
+for (let i = 0; i < 7; i++) {
+    
+  fujiTons[i] *= 6.5
+  galaTons[i] *= 6.5
+  pinkTons[i] *= 6.5
+  //Above we are looping through each element of the '...Tons' arrays and multiplying it by 6.5 to get the Ton calculation for each elem in the Arrays
+      
+
+}
+
+console.log(fujiTons)
+console.log(galaTons)
+console.log(pinkTons)
+// Above we are printing the new value of our arrays after we have covered the values to Ton bys multiplying 6.5
 
 
 
@@ -162,11 +210,30 @@ let days = 0
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+let fujiSum = 0
+let galaSum = 0
+let pinkSum = 0
+// Creating variables to store the sum for each variety
 
+for (let i = 0; i < 7; i++){
+    //i = 0 -- starting at index 0
+    //i < 7 -- there are 7 numbers to loop through through each array
+    //i ++ -- we need to increment by 1 to keep the look going
+    fujiSum += fujiTons[i] 
+    galaSum += galaTons[i]
+    pinkSum += pinkTons[i]
+    // the [i] indicates the look going through each of the 3 arrays and adding it to the fukiSum, galaSum and pinkSum variables
+}
 
+let fujiPounds = fujiSum * 2000
+let galaPounds = galaSum * 2000
+let pinkPounds = pinkSum * 2000
+// multiplying the total sum * 2000 to get Pounds conversions
+
+console.log(fujiPounds)
+console.log(galaPounds)
+console.log(pinkPounds)
+// printing Pounds to console
 
 
 
@@ -189,9 +256,18 @@ let days = 0
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = fujiPounds * .89 
+let galaProfit = galaPounds * .64
+let pinkProfit = galaPounds * .55
+
+// Above I am multiplying the total pounds of each variety by its respective Price per pound to find out out profit
+
+
+console.log(fujiProfit)
+console.log(galaProfit)
+console.log(pinkProfit)
+// printing Profits to console
+
 
 
 
@@ -209,3 +285,9 @@ let days = 0
 */
 
 // CODE HERE
+
+let totalProfit = fujiProfit + galaProfit + pinkProfit
+// Adding all varieties profits together
+
+console.log(totalProfit)
+// printing Total Profit to console

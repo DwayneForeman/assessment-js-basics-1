@@ -41,7 +41,7 @@ let gitInitDefinition = 'The git intit command is used to initialize a new GIT r
 
 //CODE HERE
 
-let gitCloneDefinition = 'The git clone command is used to generate a copy of the repository from source control websites like GItHib.com to in return save it on your own computer'
+let gitCloneDefinition = 'The git clone command is used to generate a copy of the repository from source control websites like GItHub.com to in return save it on your own computer'
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -64,7 +64,7 @@ let gitStatusDefinition = 'The git status command displays the current status of
 
 //CODE HERE
 
-let gitAddDefinition = 'The git add command is used to prepare/setup the changes to be committed, so that they can be tracked by git'
+let gitAddDefinition = 'The git add command is used to prepare/STAGE the changes to be committed, so that they can be tracked by git'
 
 let gitAddCode = 'git add .'
 
